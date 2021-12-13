@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.card{
+   padding: 0rem 3rem;
+  border-radius: 30px;
+}
+.sneaker{
+  flex-basis: 30%;
+}
+img {
+  height: 400px;
+  vertical-align: middle;
+  border-style: solid;
+  border-radius: 12px;
+  margin: 12px;
+}
+h3{
+  font-size: 1.5em;
+}
+h3{
+  color:  orange;
+}
+p{
+color: #585858;
+  font-weight: lighter;
+
+}

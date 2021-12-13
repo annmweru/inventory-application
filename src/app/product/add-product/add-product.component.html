@@ -1,0 +1,63 @@
+<div class="products-form-container">
+  <form action=""  [formGroup]="form"  (ngSubmit)="onSubmit()" novalidate>
+    <h1>New product</h1>
+    <mat-form-field class="form-control" appearance="fill">
+      <mat-label>Product Name</mat-label>
+      <input type="text" matInput formControlName="itemName"
+             placeholder="Ex. Oppo F9">
+      <mat-error *ngIf="f.itemName.errors && f.itemName.errors.required">
+        Product name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-control" appearance="fill">
+      <mat-label>Product Description</mat-label>
+      <textarea type="text" matInput formControlName="itemDescription"
+             placeholder="Ex. Oppo F9"></textarea>
+
+      <mat-error *ngIf="f.itemDescription.errors && f.itemDescription.errors.required">
+        Product description is <strong>required</strong>
+      </mat-error>
+
+      <mat-error *ngIf="f.itemDescription.errors && f.itemDescription.errors.minlength">
+        Product description <strong>should be greater than 6 letters</strong>
+      </mat-error>
+
+      <mat-error *ngIf="f.itemDescription.errors && f.itemDescription.errors.maxlength">
+        Product description <strong>should be less than 200 letters</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-radio-group class="form-control-radio" formControlName="newOrRefurb"  aria-label="Select an option">
+      <mat-radio-button value="refurb">Refurbished</mat-radio-button>
+      <mat-radio-button value="non-refurb">Non-refurbished</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Product Category</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let category of categories" [value]="category.value">
+          {{category.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Date bought</mat-label>
+      <input matInput formControlName="dateBought" [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tags</mat-label>
+      <mat-select formControlName="itemTags" multiple>
+        <mat-option *ngFor="let tag of tags" [value]="tag">{{tag}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid"> Submit</button>
+  </form>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card">
+    <div class="sneaker">
+      <img src="{{product['item-img'] || 'https://material.angular.io/assets/img/examples/shiba2.jpg'}}">
+    </div>
+  </div>
+  <div>
+    <h3>{{ product['item-name']}}</h3>
+    <h1>{{product['item-description']}}</h1>
+    <p>Item Category: {{product['item-category']}}</p>
+    <p>Item Date: {{product['item-date']}}</p>
+    <button mat-raised-button color="primary" (click)="generatePDF()"> Print </button>
+  </div>
+</div>

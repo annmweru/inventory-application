@@ -1,0 +1,44 @@
+mat-tab-group {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-gap: 1rem;
+}
+
+table, .products-paginator {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 23px;
+  width: 80%;
+}
+
+
+.product-td {
+  text-decoration: none;
+}
+
+
+
+.item-card {
+  border-radius: 12px;
+  flex: 1;
+  margin: 12px;
+}
+
+.item-card img {
+  border-radius: 12px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 12px;
+}
+
+.item-properties {
+  display: flex;
+  justify-content: space-between;
+}

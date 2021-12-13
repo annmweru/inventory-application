@@ -1,0 +1,31 @@
+.products-form-container {
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+form h1 {
+  margin: 12px;
+}
+
+mat-form-field {
+  height: 72px;
+  width: 100%;
+  margin: 12px;
+}
+
+button {
+  margin: 12px;
+}
+
+mat-radio-group {
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
